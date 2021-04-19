@@ -145,6 +145,7 @@ export default class Ui {
           '<li>Extension autorisées: png gif jpg jpeg</li>' +
         '</ul>';
     button.innerHTML = this.config.buttonContent || `${buttonIcon} ${this.api.i18n.t('Select an Image')}`;
+    button.appendChild(info);
 
     button.addEventListener('click', () => {
       this.onSelectFile();
